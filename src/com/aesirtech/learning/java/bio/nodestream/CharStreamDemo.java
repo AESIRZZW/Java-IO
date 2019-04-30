@@ -1,4 +1,4 @@
-package com.aesirtech.learning.java.io.nodestream;
+package com.aesirtech.learning.java.bio.nodestream;
 
 import java.io.*;
 
@@ -11,7 +11,7 @@ import java.io.*;
 public class CharStreamDemo {
     public static void main(String[] args) {
         File sourceFile = new File("resource/The Road Not Taken.txt");
-        File targetFile = new File("resource/The Road Not Taken.bak");
+        File targetFile = new File("resource/The Road Not Taken (BIO).txt");
         FileReader fileReader = null;
         FileWriter fileWriter = null;
         try {
@@ -21,8 +21,8 @@ public class CharStreamDemo {
             char[] cbuf = new char[10];
             // Record the number of chars read into cbuf each time.
             int len;
-            while((len = fileReader.read(cbuf)) != -1){
-                fileWriter.write(cbuf,0,len);
+            while ((len = fileReader.read(cbuf)) != -1) {
+                fileWriter.write(cbuf, 0, len);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
